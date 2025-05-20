@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-05-20 10:05:09
  * @LastEditors: e_liujianlong e_liujianlong@enn.cn
- * @LastEditTime: 2025-05-20 10:23:58
+ * @LastEditTime: 2025-05-20 13:35:03
  * @FilePath: \mars\.stylelintrc.cjs
  * @Description: Do not edit
  */
@@ -13,22 +13,8 @@ module.exports = {
     'stylelint-config-recommended-vue/scss',
     'stylelint-config-recess-order'
   ],
-  overrides: [
-    {
-      files: ['**/*.(scss|css|vue|html)'],
-      customSyntax: 'postcss-scss'
-    },
-    {
-      files: ['**/*.(html|vue)'],
-      customSyntax: 'postcss-html'
-    }
-  ],
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json', '**/*.md', '**/*.yaml'],
-  /**
-   * null  => 关闭该规则
-   * always => 必须
-   */
   rules: {
+    'block-opening-brace-space-before': 'never', // <--- 添加或修改此行
     'value-keyword-case': null, // 在 css 中使用 v-bind，不报错
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
     'function-url-quotes': 'always', // 要求或禁止 URL 的引号 "always(必须加上引号)"|"never(没有引号)"
